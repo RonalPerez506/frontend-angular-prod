@@ -1,0 +1,123 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['/empleado/index']"
+        >Empleados</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/control/index']"
+        >Historial de marcaje</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/departamento/index']"
+        >Departamentos</a
+      >
+      <a
+        class="nav-item nav-link"
+        data-toggle="dropdown"
+        [routerLink]="['/tipousuario/index']"
+        >Tipos de usuario</a
+      >
+    </div>
+  </div>
+  <button
+    (click)="logout()"
+    class="btn btn-outline-success"
+    style="float: right"
+  >
+    Logout
+  </button>
+</nav>
+<br /><br />
+<div id="heading" class="container" style="width: 570px; height: 40px">
+  <h1 id="heading">Ingrese datos</h1>
+
+  <form [formGroup]="formm" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label id="heading" for="usuario">codigo para usuario: </label>
+      <input
+        formControlName="usuario"
+        id="usuario"
+        type="text"
+        class="form-control"
+        style="width: 570px; height: 40px"
+      />
+      <div
+        *ngIf="f['usuario'].touched && f['usuario'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['usuario'].errors && f['usuario'].errors['required']">
+          Se requiere nombre.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label id="heading" for="id_tipo_usuario">Id del tipo de usuario: </label>
+      <input
+        formControlName="id_tipo_usuario"
+        id="id_tipo_usuario"
+        type="number"
+        class="form-control"
+        style="width: 570px; height: 40px"
+      />
+      <div
+        *ngIf="f['id_tipo_usuario'].touched && f['id_tipo_usuario'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="
+            f['id_tipo_usuario'].errors &&
+            f['id_tipo_usuario'].errors['required']
+          "
+        >
+          Se requiere apellido.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label id="heading" for="id_empleado">Id empleado: </label>
+      <input
+        formControlName="id_empleado"
+        id="id_empleado"
+        type="number"
+        class="form-control"
+        style="width: 570px; height: 40px"
+      />
+      <div
+        *ngIf="f['id_empleado'].touched && f['id_empleado'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="f['id_empleado'].errors && f['id_empleado'].errors['required']"
+        >
+          Se requiere dpi.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label id="heading" for="contrasena">Contraseña: </label>
+      <input
+        formControlName="contrasena"
+        id="contrasena"
+        type="text"
+        class="form-control"
+        style="width: 570px; height: 40px"
+      />
+      <div
+        *ngIf="f['contrasena'].touched && f['contrasena'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="f['contrasena'].errors && f['contrasena'].errors['required']"
+        >
+          Se requiere departamento.
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-success" type="submit" [disabled]="!formm.valid">
+      Guardar <i class="fa-solid fa-floppy-disk"></i>
+    </button>
+  </form>
+</div>

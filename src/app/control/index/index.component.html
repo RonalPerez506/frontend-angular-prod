@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['/empleado/index']"
+        >Empleados</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/control/index']"
+        >Historial de marcaje</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/departamento/index']"
+        >Departamentos</a
+      >
+      <a
+        class="nav-item nav-link"
+        data-toggle="dropdown"
+        [routerLink]="['/tipousuario/index']"
+        >Tipos de usuario</a
+      >
+    </div>
+  </div>
+  <button
+    (click)="logout()"
+    class="btn btn-outline-success"
+    style="float: right"
+  >
+    Logout
+  </button>
+</nav>
+<br /><br />
+<div class="container">
+  <br />
+
+  <table class="table table-dark table-sm">
+    <tr>
+      <th>ID EMPLEADO</th>
+      <th>Nombre y apellido</th>
+      <th>Marcaje</th>
+      <th>Fecha</th>
+      <th>HoRA</th>
+    </tr>
+
+    <tr *ngFor="let control of controls">
+      <td>{{ control.id_empleado }}</td>
+      <td>{{ control.nombre + " " + control.apellido }}</td>
+
+      <td>{{ control.tipo }}</td>
+      <td>{{ control.fecha }}</td>
+      <td>{{ control.hora }}</td>
+      <td></td>
+    </tr>
+  </table>
+</div>

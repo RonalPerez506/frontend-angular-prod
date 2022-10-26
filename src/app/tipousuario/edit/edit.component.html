@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['/empleado/index']"
+        >Empleados</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/control/index']"
+        >Historial de marcaje</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/departamento/index']"
+        >Departamentos</a
+      >
+      <a
+        class="nav-item nav-link"
+        data-toggle="dropdown"
+        [routerLink]="['/tipousuario/index']"
+        >Tipos de usuario</a
+      >
+    </div>
+  </div>
+  <button
+    (click)="logout()"
+    class="btn btn-outline-success"
+    style="float: right"
+  >
+    Logout
+  </button>
+</nav>
+<br /><br />
+<div id="heading" class="container" style="width: 570px; height: 40px">
+  <h1>Actualizar tipo de usuario</h1>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="nombre_tipo">Nombre:</label>
+      <input
+        formControlName="nombre_tipo"
+        id="nombre_tipo"
+        type="text"
+        [(ngModel)]="tipousuario.nombre_tipo"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['nombre_tipo'].touched && f['nombre_tipo'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="f['nombre_tipo'].errors && f['nombre_tipo'].errors['required']"
+        >
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <button class="btn btn-success" type="submit" [disabled]="!form.valid">
+      Guardar <i class="fa-solid fa-floppy-disk"></i>
+    </button>
+  </form>
+</div>

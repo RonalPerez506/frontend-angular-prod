@@ -1,0 +1,174 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['/empleado/index']"
+        >Empleados</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/control/index']"
+        >Historial de marcaje</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/departamento/index']"
+        >Departamentos</a
+      >
+      <a
+        class="nav-item nav-link"
+        data-toggle="dropdown"
+        [routerLink]="['/tipousuario/index']"
+        >Tipos de usuario</a
+      >
+    </div>
+  </div>
+  <button
+    (click)="logout()"
+    class="btn btn-outline-success"
+    style="float: right"
+  >
+    Logout
+  </button>
+</nav>
+<br /><br />
+<script
+  src="https://kit.fontawesome.com/561f10f14e.js"
+  crossorigin="anonymous"
+></script>
+<div id="heading" class="container" style="width: 570px; height: 40px">
+  <h1 id="heading">Actualizar datos</h1>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label id="heading" for="nombre">Nombre:</label>
+      <input
+        formControlName="nombre"
+        id="nombre"
+        type="text"
+        [(ngModel)]="empleado.nombre"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['nombre'].touched && f['nombre'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['nombre'].errors && f['nombre'].errors['required']">
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label id="heading" for="apellido">Apellido:</label>
+      <input
+        formControlName="apellido"
+        id="apellido"
+        type="text"
+        [(ngModel)]="empleado.apellido"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['apellido'].touched && f['apellido'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['apellido'].errors && f['apellido'].errors['required']">
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label id="heading" for="dpi">DPI:</label>
+      <input
+        formControlName="dpi"
+        id="dpi"
+        type="number"
+        [(ngModel)]="empleado.dpi"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['dpi'].touched && f['dpi'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['dpi'].errors && f['dpi'].errors['required']">
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label id="heading" for="id_departamento">Departamento:</label>
+      <input
+        formControlName="id_departamento"
+        id="id_departamento"
+        type="number"
+        [(ngModel)]="empleado.id_departamento"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['id_departamento'].touched && f['id_departamento'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="
+            f['id_departamento'].errors &&
+            f['id_departamento'].errors['required']
+          "
+        >
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label id="heading" for="fecha_inicio_labores">Incio de labores:</label>
+      <input
+        formControlName="fecha_inicio_labores"
+        id="fecha_inicio_labores"
+        type="date"
+        [(ngModel)]="empleado.fecha_inicio_labores"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          f['fecha_inicio_labores'].touched && f['fecha_inicio_labores'].invalid
+        "
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="
+            f['fecha_inicio_labores'].errors &&
+            f['fecha_inicio_labores'].errors['required']
+          "
+        >
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label id="heading" for="fecha_nacimiento">Fecha nacimiento:</label>
+      <input
+        formControlName="fecha_nacimiento"
+        id="fecha_nacimiento"
+        type="date"
+        [(ngModel)]="empleado.fecha_nacimiento"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['fecha_nacimiento'].touched && f['fecha_nacimiento'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="
+            f['fecha_nacimiento'].errors &&
+            f['fecha_nacimiento'].errors['required']
+          "
+        >
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <button class="btn btn-success" type="submit" [disabled]="!form.valid">
+      Guardar <i class="fa-solid fa-floppy-disk"></i>
+    </button>
+  </form>
+</div>

@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['/empleado/index']"
+        >Empleados</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/control/index']"
+        >Historial de marcaje</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/departamento/index']"
+        >Departamentos</a
+      >
+      <a
+        class="nav-item nav-link"
+        data-toggle="dropdown"
+        [routerLink]="['/tipousuario/index']"
+        >Tipos de usuario</a
+      >
+    </div>
+  </div>
+  <button
+    (click)="logout()"
+    class="btn btn-outline-success"
+    style="float: right"
+  >
+    Logout
+  </button>
+</nav>
+<br /><br />
+<div id="heading" class="container" style="width: 570px; height: 40px">
+  <h1>Actualizar datos de departamento</h1>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="nombre_depto">Nombre:</label>
+      <input
+        formControlName="nombre_depto"
+        id="nombre_depto"
+        type="text"
+        [(ngModel)]="departamentos.nombre_depto"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['nombre_depto'].touched && f['nombre_depto'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="
+            f['nombre_depto'].errors && f['nombre_depto'].errors['required']
+          "
+        >
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="desc">Descripcion:</label>
+      <input
+        formControlName="desc"
+        id="desc"
+        type="text"
+        [(ngModel)]="departamentos.desc"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['desc'].touched && f['desc'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['desc'].errors && f['desc'].errors['required']">
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+    <br />
+    <button class="btn btn-success" type="submit" [disabled]="!form.valid">
+      Update
+    </button>
+  </form>
+</div>

@@ -1,0 +1,89 @@
+<script
+  src="https://kit.fontawesome.com/561f10f14e.js"
+  crossorigin="anonymous"
+></script>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['/empleado/index']"
+        >Empleados</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/control/index']"
+        >Historial de marcaje</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/departamento/index']"
+        >Departamentos</a
+      >
+      <a
+        class="nav-item nav-link"
+        data-toggle="dropdown"
+        [routerLink]="['/tipousuario/index']"
+        >Tipos de usuario</a
+      >
+      <a class="nav-item nav-link" [routerLink]="['/usuario/create']"
+        >Registrar usuario</a
+      >
+    </div>
+  </div>
+  <button
+    (click)="logout()"
+    class="btn btn-outline-success"
+    style="float: right"
+  >
+    Logout
+  </button>
+</nav>
+<br /><br />
+
+<div class="container">
+  <a href="#" routerLink="/empleado/create/" class="btn btn-success"
+    >Crear nuevo empleado <i class="fa-solid fa-circle-plus"></i></a
+  ><br /><br />
+
+  <table class="table table-dark table-sm">
+    <tr>
+      <th>ID</th>
+      <th>Nombre y apellido</th>
+      <th>DPI</th>
+      <th>Departamento</th>
+      <th>Inicio de labores</th>
+      <th>Fecha nacimiento</th>
+      <th width="220px">Action</th>
+    </tr>
+    <tr *ngFor="let empleado of empleados">
+      <td>{{ empleado.id }}</td>
+      <td>{{ empleado.nombre + " " + empleado.apellido }}</td>
+      <td>{{ empleado.dpi }}</td>
+      <td>{{ empleado.id_departamento }}</td>
+      <td>{{ empleado.fecha_inicio_labores }}</td>
+      <td>{{ empleado.fecha_nacimiento }}</td>
+
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+          <button
+            [routerLink]="['/empleado/', empleado.id, 'view']"
+            class="btn btn-success"
+          >
+            <i class="fa-solid fa-eye"></i>
+          </button>
+
+          <button
+            [routerLink]="['/empleado/', empleado.id, 'edit']"
+            class="btn btn-success"
+          >
+            <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+
+          <button
+            type="button"
+            (click)="deleteEmpleado(empleado.id)"
+            class="btn btn-success"
+          >
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
