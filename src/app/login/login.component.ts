@@ -2,6 +2,7 @@ import { Component, Inject, Injectable, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import Swal from 'sweetalert2';
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthService, SocialUser } from 'angularx-social-login';
 
 @Component({
   selector: 'app-login',
@@ -16,10 +17,14 @@ export class LoginComponent implements OnInit {
     pass: "123456"
   }
 
+  socialUser!: SocialUser;
+  userLogged!: SocialUser;
+  isLogged!: boolean;
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private authServices: SocialAuthService
   ) {
 
 
@@ -28,9 +33,35 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.authServices.authState.subscribe(
+      data => {
+        this.userLogged = data;
+        this.isLogged = (this.userLogged != null);
+      }
+    );
   }
 
+  signInWithGoogle(): void {
+    console.log("Entro a autenticación con GOOGLE.......");
+    this.authServices.signIn(GoogleLoginProvider.PROVIDER_ID).then(
+      data => {
+        console.log("Logeado con Google: "+data);
+        this.socialUser = data;
+        this.isLogged = true;
+      }
+    );
+  }
 
+  signInWithFB(): void {
+    console.log("Entro a autenticación con FACEBOOK.......");
+    this.authServices.signIn(FacebookLoginProvider.PROVIDER_ID).then(
+      data => {
+        console.log("Logeado con Facebook: "+data);
+        this.socialUser = data;
+        this.isLogged = true;
+      }
+    );
+  }
 
   login() {
     console.log(this.user);
@@ -79,6 +110,7 @@ export class LoginComponent implements OnInit {
     this.authService.singout().subscribe((res: any) => {
       localStorage.clear();
       this.router.navigate(['']);
+      this.authServices.signOut();
     })
   }
 

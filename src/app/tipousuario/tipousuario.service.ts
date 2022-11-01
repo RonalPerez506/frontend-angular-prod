@@ -11,8 +11,8 @@ import { catchError } from 'rxjs/operators';
 export class TipousuarioService {
 
   // private apiURL = "http://192.168.1.30:7070/api/tipo_usuarios/";
-  // private apiURL = "http://10.8.0.5:7070/api/tipo_usuarios/";
-  private apiURL = "http://localhost:7070/api/tipo_usuarios/";
+  private apiURL = "http://10.8.0.5:8000/api/tipo_usuarios/";
+  // private apiURL = "http://localhost:7070/api/tipo_usuarios/";
 
   // private apiURL = "http://192.168.1.24:8000/api/tipo_usuarios/";
 

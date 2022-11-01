@@ -11,9 +11,9 @@ import { catchError } from 'rxjs/operators';
 export class DepartamentoService {
 
   // private apiURL = "http://192.168.1.30:7070/api/departamentos/";
-  // private apiURL = "http://10.8.0.5:7070/api/departamentos/";
+  private apiURL = "http://10.8.0.5:8000/api/departamentos/";
 
-  private apiURL = "http://localhost:7070/api/departamentos/";
+  // private apiURL = "http://localhost:7070/api/departamentos/";
 
   // private apiURL = "http://192.168.1.24:8000/api/departamentos/";
 

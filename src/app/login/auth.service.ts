@@ -8,9 +8,9 @@ import { Credenciales } from './credenciales';
 })
 export class AuthService {
 
-  // private apiURL = "http://192.168.1.24:7070/api/";
-  // private apiURL = "http://10.8.0.5:7070/api/";
-  private apiURL = "http://localhost:7070/api/";
+  // private apiURL = "http://192.168.1.24:8000/api/";
+  private apiURL = "http://10.8.0.5:8000/api/";
+  // private apiURL = "http://localhost:7070/api/";
 
   // private apiURL = "http://192.168.1.24:8000/api/";
 
