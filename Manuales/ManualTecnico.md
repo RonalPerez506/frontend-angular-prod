@@ -142,20 +142,17 @@ Base de datos en Postgresql en Oracle linux
 
 Para agregar autenticación con Google o Facebook se debe tener una cuenta registrada como desarrollador, luego crear una aplicacion web con permisos de inicio de sesion.
 
-
 google:
 
     372832709126-kv3cmi52e098v079vtdqsg9.apps.googleusercontent.com
-    
-![imagen](https://user-images.githubusercontent.com/99605908/199373671-91907f14-a543-4957-840d-c69578b22d7d.png)
 
+![imagen](https://user-images.githubusercontent.com/99605908/199373671-91907f14-a543-4957-840d-c69578b22d7d.png)
 
 facebook:
 
     GOCSPX-0rhS-Y6kAcXhj1iwHH8
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199373586-264cc913-3532-4b12-bfa1-6c35d5472b61.png)
-
 
 ---
 
@@ -296,3 +293,13 @@ docker-compose.yml
         }
 
     }
+
+## Metodos: GET POST DELETE PUT
+
+Metodo POST para inicio de sesion y tocken JWT
+
+Metodo GET para obtener datos de la API
+
+Metodo DELETE para eliminar datos
+
+Metodo PUT para editar datos
