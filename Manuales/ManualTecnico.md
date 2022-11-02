@@ -302,3 +302,11 @@ Metodo DELETE para eliminar datos
 Metodo PUT para editar datos
 
 JWT para autenticación de usuario
+
+![imagen](https://user-images.githubusercontent.com/99605908/199375213-d32fd8bf-3cdd-4f3a-b24d-1e6dd2ee1eb8.png)
+
+Sesión concluye después de 30s el tocken se botta de local storage
+
+![imagen](https://user-images.githubusercontent.com/99605908/199375282-1dae37f3-479c-4513-96dd-dfabe8f0f165.png)
+
+
