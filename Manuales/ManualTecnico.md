@@ -34,6 +34,8 @@
 
 # VPS
 
+Se instalo Ubuntu Server 20.04, en este se configuro como servidor de VPN con openvpn, también se adquirió un domino Free que apunta a esta ip publica. se crearon los usuarios correspondientes con permisos de sudo
+
     public ip: http://216.238.68.70/
 
     dominio: http://webappcontrol.ddns.net
@@ -43,6 +45,8 @@
     pass: XXXXXXXXX
 
     SO: Ubuntuserver 20.04
+
+IP que utilizaran usando VPN
 
     216.238.68.70 -> 10.8.0.1 -> FrontEnd - VPS(OpenVpn) Docker(Nginx:80 Nginx:8000) -> Ubuntu Server 20.04
 
@@ -82,6 +86,8 @@
 
 # configuracion ftp
 
+Se configuro para transferencia de archivos
+
     apt-get install vsftpd
 
     ps -ef | grep vsftpd
@@ -89,6 +95,8 @@
 ---
 
 # Instalación y configuración postgresql en Oracle Linux
+
+Oracle Linux se instalo sobre una maquina virtual en VirtualBox, en esa se creo un usuario oracle para la administración de la base de datos. Este hace uso de yum para la instalación de paquetes, tambien se instalo Openvpn para poder comunicarce con el Backend. Para la base de datos se uso POSTGRESQL y se crearon los usuarios correspondientes para la administración de DB
 
     sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-6-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
@@ -114,6 +122,10 @@
     \q
     \l
 
+    yum install openvpn-client
+
+    openvpn --config _certificado
+
 # Sistema operativo Oracle Linux 7.9 virtual
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199334020-bb0c93bf-3160-4d8c-909a-005d856cc2ad.png)
@@ -128,6 +140,8 @@ Base de datos en Postgresql en Oracle linux
 
 # OAuth2.0
 
+Para agregar autenticación con Google o Facebook se debe tener una cuenta registrada como desarrollador, luego crear una aplicacion web con permisos de inicio de sesion.
+
 google:
 
     372832709126-kv3cmi52e098v079vtdqsg9.apps.googleusercontent.com
@@ -139,9 +153,21 @@ google:
 
 # Docker VPS
 
+Se instalo Docker y Docker-compose en la VPS para administrar los contenedores, se usaron los archivos yml para levantar contenedores con con que se necesita.
+
      curl -fsSL https://get.docker.com -o get-docker.sh
 
      sudo sh get-docker.sh
+
+     docker ps
+
+     docker start _id-contenedor
+
+     docker stop _id-contenedor
+
+     docker-compose up -d
+
+     docker-compose down
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199334548-ef7016e4-8b78-47a7-a00f-a05ed934f845.png)
 
