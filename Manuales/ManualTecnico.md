@@ -297,9 +297,8 @@ docker-compose.yml
 ## Metodos: GET POST DELETE PUT
 
 Metodo POST para inicio de sesion y tocken JWT
-
 Metodo GET para obtener datos de la API
-
 Metodo DELETE para eliminar datos
-
 Metodo PUT para editar datos
+
+JWT para autenticación de usuario
