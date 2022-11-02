@@ -77,7 +77,7 @@ import {
           },
           {
             id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('1331252287613554')
+            provider: new FacebookLoginProvider('664901165221576')
           }
         ],
         onError: (err) => {
