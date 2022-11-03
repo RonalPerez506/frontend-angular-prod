@@ -10,7 +10,7 @@
 | :---------------: | ------------: |
 |    Ronal Pérez    | 7690-14-11506 |
 | Geoffrey Hernadez |  7690-14-0000 |
-|    Marco Pérez    |  7690-14-0000 |
+|    Marco Pérez    | 7690-19-20394 |
 
 # Desarrollo de aplicación:
 
