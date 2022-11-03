@@ -40,7 +40,7 @@ Este se puede editar por cambio de apellido a Morales
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199652804-ca5e802b-f078-408e-a5ad-5900da86b8a3.png)
 
-![imagen](https://user-images.githubusercontent.com/99605908/199652825-c1e8cb4e-d30a-4d46-81a3-b180c3607ac1.png)
+![imagen](https://user-images.githubusercontent.com/99605908/199653977-7ae6b955-68b1-493b-83e2-551b88b34842.png)
 
 
 También se puede eliminar
