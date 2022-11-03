@@ -14,17 +14,18 @@ Al ingresar a la dirección IP en el navegador http://216.238.68.70/ o domino ht
 
 La pagina principal tiene esta interfaz:
 
-![imagen](https://user-images.githubusercontent.com/99605908/199652571-2c5117f8-329b-49b0-88ae-355dbb275fc2.png)
+![imagen](https://user-images.githubusercontent.com/99605908/199653606-8fa00d26-df3d-47c8-b479-b4546852d680.png)
 
 
 Se debe tener usuario registrado para poder acceder, dependiendo de los permisos, la siguiente pantalla es diferente, para usuario administrador es la siguiente:
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199652613-cebb9aa1-5fde-449c-93bb-f485ab3d06cf.png)
 
+![imagen](https://user-images.githubusercontent.com/99605908/199653664-f4bb49d1-e32e-443d-800f-74fc63ed6011.png)
+
 
 Esta muestra los empelados registrados, luego tenemos varias opciones para el usuario administrador.
 
-![imagen](https://user-images.githubusercontent.com/99605908/199652649-e78cddeb-e40c-4ab4-8715-3df4e7f87eb7.png)
 ![imagen](https://user-images.githubusercontent.com/99605908/199652674-f802a532-4a5e-4033-8182-76dca167efd5.png)
 
 
