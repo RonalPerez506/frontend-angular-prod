@@ -15,17 +15,17 @@
 |    Marco Pérez    | 7690-19-20394 |
 
 # Desarrollo de aplicación:
-|      puntos        |          |
-| :---------------: | ------------: |
-|    VPS            | ubuntu server |
-| backen  marcaje   |  Completado   |
-|Frontend marcaje   |  Completado   |
-|    postgresql     |  Oracle Linux |
-|    Reportes       |  Jasper Report|
-|    VPN            |  OPen VPN     |
-|    Docker         |  Completado   |
 
-
+|      puntos      |               |
+| :--------------: | ------------: |
+|       VPS        | ubuntu server |
+|  Backen marcaje  |    Completado |
+| Frontend marcaje |    Completado |
+|    Postgresql    |  Oracle Linux |
+|      Oauth       |    FB, Google |
+|     Reportes     | Jasper Report |
+|       VPN        |      OPen VPN |
+|      Docker      |    Completado |
 
 ## Estructura
 
@@ -164,20 +164,20 @@ Base de datos en Postgresql en Oracle linux
 
 ## Endpoints para Generar los reportes
 
-- Reporte General 
-/reporte/reportGeneral
+- Reporte General
+  /reporte/reportGeneral
 
 - Reporte por empleado
-/reporte/employee/{id_empleado}
+  /reporte/employee/{id_empleado}
 
 - Reporte por departamento
-/reporte/departament/{id_departament}
+  /reporte/departament/{id_departament}
 
 - Reporte por HoraEntrada
-/report/getEmployees/horaEntrada
+  /report/getEmployees/horaEntrada
 
 - Reporte por HoraSalida
-/report/getEmployees/horaSalida
+  /report/getEmployees/horaSalida
 
 ## preview de los reportes
 
@@ -353,5 +353,3 @@ JWT para autenticación de usuario
 Sesión concluye después de 30s el tocken se botta de local storage
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199375282-1dae37f3-479c-4513-96dd-dfabe8f0f165.png)
-
-
