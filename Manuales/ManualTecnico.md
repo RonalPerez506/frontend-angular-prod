@@ -9,7 +9,7 @@
 |      Nombre       |         Carné |
 | :---------------: | ------------: |
 |    Ronal Pérez    | 7690-14-11506 |
-| Geoffrey Hernadez |  7690-14-0000 |
+| Geoffrey Hernadez |  7690-14-3807 |
 |    Marco Pérez    |  7690-14-0000 |
 
 # Desarrollo de aplicación:
