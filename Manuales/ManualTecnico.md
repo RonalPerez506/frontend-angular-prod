@@ -100,18 +100,31 @@ Oracle Linux se instalo sobre una maquina virtual en VirtualBox, en esa se creo 
 
     sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-6-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
-    sudo yum install -y postgresql15-server
+    sudo yum install -y postgresql-server
 
-    sudo service postgresql-15 initdb
+    sudo service postgresql initdb
 
-    sudo chkconfig postgresql-15 on
+    sudo chkconfig postgresql on
 
-    sudo service postgresql-15 start
+    sudo service postgresql start
 
     sudo su - postgres
 
     psql
 
+Se configuro el archivo postgresql.conf para acceso remoto
+
+    listen_addresses = '*'          # what IP address(es) to listen on;
+
+De igual forma el archivo pg_hba.conf
+
+    host    all      all              0.0.0.0/0                    md5
+
+    host    all      all              ::/0                         md5
+
+    systemctl restart postgresql.service
+
+Datos creado para base de datos
 
     CREATE USER sa WITH PASSWORD 'GTbd2022';
 
@@ -308,5 +321,3 @@ JWT para autenticación de usuario
 Sesión concluye después de 30s el tocken se botta de local storage
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199375282-1dae37f3-479c-4513-96dd-dfabe8f0f165.png)
-
-
