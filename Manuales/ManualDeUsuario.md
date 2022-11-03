@@ -21,7 +21,7 @@ Se debe tener usuario registrado para poder acceder, dependiendo de los permisos
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199652613-cebb9aa1-5fde-449c-93bb-f485ab3d06cf.png)
 
-![imagen](https://user-images.githubusercontent.com/99605908/199653664-f4bb49d1-e32e-443d-800f-74fc63ed6011.png)
+![imagen](https://user-images.githubusercontent.com/99605908/199653760-fb68e9ac-e0f0-4768-93e3-4ad117d57501.png)
 
 
 Esta muestra los empelados registrados, luego tenemos varias opciones para el usuario administrador.
