@@ -149,6 +149,38 @@ Base de datos en Postgresql en Oracle linux
 
 ---
 
+# Reportes de historial de marcación de empleados
+
+## Tecnologías Utilizadas
+
+- Jasperreports
+- TIBCO Jaspersoft Studio (Edición comunitaria)
+
+## Plantilla y Estructura
+
+![image](https://user-images.githubusercontent.com/112280392/199644347-a577b5fc-5131-43e7-a142-3af5b43c3213.png)
+
+## Endpoints para Generar los reportes
+
+- Reporte General 
+/reporte/reportGeneral
+
+- Reporte por empleado
+/reporte/employee/{id_empleado}
+
+- Reporte por departamento
+/reporte/departament/{id_departament}
+
+- Reporte por HoraEntrada
+/report/getEmployees/horaEntrada
+
+- Reporte por HoraSalida
+/report/getEmployees/horaSalida
+
+## preview de los reportes
+
+![image](https://user-images.githubusercontent.com/112280392/199645927-ae265510-9a4a-4441-aa80-60e8ad176c07.png)![image](https://user-images.githubusercontent.com/112280392/199645507-1af6df44-f4a1-4d3f-bc28-5e8bb5f8c63e.png)
+
 # OAuth2.0
 
 Para agregar autenticación con Google o Facebook se debe tener una cuenta registrada como desarrollador, luego crear una aplicacion web con permisos de inicio de sesion.
