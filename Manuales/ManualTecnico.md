@@ -17,6 +17,7 @@
 | :---------------: | ------------: |
 |    VPS            | ubuntu server |
 | backen  marcaje   |  Completado   |
+|Frontend marcaje   |  Completado   |
 |    postgresql     |  Oracle Linux |
 |    Reportes       |  Jasper Report|
 |    VPN            |  OPen VPN     |
