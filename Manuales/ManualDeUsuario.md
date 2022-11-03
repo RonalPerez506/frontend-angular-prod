@@ -54,8 +54,7 @@ Depende de las acciones que se requiera
 
 Para agregar departamentos también de la misma manera con todas las opciones activas,
 
-![imagen](https://user-images.githubusercontent.com/99605908/199652955-d6cd66a4-8c37-4aaa-8e49-70c94f8a88d6.png)
-
+![imagen](https://user-images.githubusercontent.com/99605908/199654087-5118afcb-bc16-4b32-98a4-e987cbca08c6.png)
 
 Agregar
 
