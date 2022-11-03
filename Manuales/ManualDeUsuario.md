@@ -98,3 +98,8 @@ En esta parte con el administrador se puede visualizar los marcajes
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199653494-5bf4dc0c-b31f-43b2-a690-f7c1a97870bf.png)
 
+Para cerrar simplemente clic en el boton Logout esquina superior derecha
+
+![imagen](https://user-images.githubusercontent.com/99605908/199654269-af07a3dc-34f6-4605-b991-e8058e5b6591.png)
+
+
