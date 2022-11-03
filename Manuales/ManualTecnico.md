@@ -113,18 +113,33 @@ Oracle Linux se instalo sobre una maquina virtual en VirtualBox, en esa se creo 
 
     sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-6-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
-    sudo yum install -y postgresql15-server
+    sudo yum install -y postgresql-server
 
-    sudo service postgresql-15 initdb
+    sudo service postgresqlinitdb
 
-    sudo chkconfig postgresql-15 on
+    sudo chkconfig postgresql on
 
-    sudo service postgresql-15 start
+    sudo service postgresql start
 
     sudo su - postgres
 
     psql
 
+Para acceso remoto se configuro el archivo postgresql.conf
+
+    #listen_addresses = 'localhost'         # what IP address(es) to listen
+
+    listen_addresses = '*'          # what IP address(es) to listen on;
+
+Y el pg_hba.conf
+
+    host    all      all              0.0.0.0/0                    md5
+
+    host    all      all              ::/0                         md5
+
+    systemctl restart postgresql.service
+
+Datos de Base de datos
 
     CREATE USER sa WITH PASSWORD 'GTbd2022';
 
