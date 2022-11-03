@@ -15,6 +15,17 @@
 |    Marco Pérez    | 7690-19-20394 |
 
 # Desarrollo de aplicación:
+|      puntos        |          |
+| :---------------: | ------------: |
+|    VPS            | ubuntu server |
+| backen  marcaje   |  Completado   |
+|Frontend marcaje   |  Completado   |
+|    postgresql     |  Oracle Linux |
+|    Reportes       |  Jasper Report|
+|    VPN            |  OPen VPN     |
+|    Docker         |  Completado   |
+
+
 
 ## Estructura
 
@@ -102,31 +113,18 @@ Oracle Linux se instalo sobre una maquina virtual en VirtualBox, en esa se creo 
 
     sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-6-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
-    sudo yum install -y postgresql-server
+    sudo yum install -y postgresql15-server
 
-    sudo service postgresql initdb
+    sudo service postgresql-15 initdb
 
-    sudo chkconfig postgresql on
+    sudo chkconfig postgresql-15 on
 
-    sudo service postgresql start
+    sudo service postgresql-15 start
 
     sudo su - postgres
 
     psql
 
-Se configuro el archivo postgresql.conf para acceso remoto
-
-    listen_addresses = '*'          # what IP address(es) to listen on;
-
-De igual forma el archivo pg_hba.conf
-
-    host    all      all              0.0.0.0/0                    md5
-
-    host    all      all              ::/0                         md5
-
-    systemctl restart postgresql.service
-
-Datos creado para base de datos
 
     CREATE USER sa WITH PASSWORD 'GTbd2022';
 
@@ -152,6 +150,38 @@ Base de datos en Postgresql en Oracle linux
 ![imagen](https://user-images.githubusercontent.com/99605908/199333658-ec1f5648-5b8b-41af-86c3-da3a1aba38fa.png)
 
 ---
+
+# Reportes de historial de marcación de empleados
+
+## Tecnologías Utilizadas
+
+- Jasperreports
+- TIBCO Jaspersoft Studio (Edición comunitaria)
+
+## Plantilla y Estructura
+
+![image](https://user-images.githubusercontent.com/112280392/199644347-a577b5fc-5131-43e7-a142-3af5b43c3213.png)
+
+## Endpoints para Generar los reportes
+
+- Reporte General 
+/reporte/reportGeneral
+
+- Reporte por empleado
+/reporte/employee/{id_empleado}
+
+- Reporte por departamento
+/reporte/departament/{id_departament}
+
+- Reporte por HoraEntrada
+/report/getEmployees/horaEntrada
+
+- Reporte por HoraSalida
+/report/getEmployees/horaSalida
+
+## preview de los reportes
+
+![image](https://user-images.githubusercontent.com/112280392/199645927-ae265510-9a4a-4441-aa80-60e8ad176c07.png)![image](https://user-images.githubusercontent.com/112280392/199645507-1af6df44-f4a1-4d3f-bc28-5e8bb5f8c63e.png)![image](https://user-images.githubusercontent.com/112280392/199647456-0187b267-1197-460b-9750-89f534dddfd5.png)![image](https://user-images.githubusercontent.com/112280392/199647580-7cc04f59-5da7-4d4a-a799-49c4880db11b.png)
 
 # OAuth2.0
 
@@ -323,3 +353,5 @@ JWT para autenticación de usuario
 Sesión concluye después de 30s el tocken se botta de local storage
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199375282-1dae37f3-479c-4513-96dd-dfabe8f0f165.png)
+
+
