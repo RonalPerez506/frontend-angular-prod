@@ -102,4 +102,9 @@ Para cerrar simplemente clic en el boton Logout esquina superior derecha
 
 ![imagen](https://user-images.githubusercontent.com/99605908/199654269-af07a3dc-34f6-4605-b991-e8058e5b6591.png)
 
+Si queremos generar los reportes nos dirigimos al submenú reportes en la parte superior
+
+## preview de los reportes
+
+![image](https://user-images.githubusercontent.com/112280392/199645927-ae265510-9a4a-4441-aa80-60e8ad176c07.png)![image](https://user-images.githubusercontent.com/112280392/199645507-1af6df44-f4a1-4d3f-bc28-5e8bb5f8c63e.png)![image](https://user-images.githubusercontent.com/112280392/199647456-0187b267-1197-460b-9750-89f534dddfd5.png)
 
