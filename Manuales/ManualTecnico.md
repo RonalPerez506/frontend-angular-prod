@@ -194,10 +194,6 @@ Base de datos en Postgresql en Oracle linux
 - Reporte por HoraSalida
   /report/getEmployees/horaSalida
 
-## preview de los reportes
-
-![image](https://user-images.githubusercontent.com/112280392/199645927-ae265510-9a4a-4441-aa80-60e8ad176c07.png)![image](https://user-images.githubusercontent.com/112280392/199645507-1af6df44-f4a1-4d3f-bc28-5e8bb5f8c63e.png)![image](https://user-images.githubusercontent.com/112280392/199647456-0187b267-1197-460b-9750-89f534dddfd5.png)![image](https://user-images.githubusercontent.com/112280392/199647580-7cc04f59-5da7-4d4a-a799-49c4880db11b.png)
-
 # OAuth2.0
 
 Para agregar autenticación con Google o Facebook se debe tener una cuenta registrada como desarrollador, luego crear una aplicacion web con permisos de inicio de sesion.
